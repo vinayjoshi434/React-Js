@@ -1,8 +1,8 @@
-import { createContext,usecontext } from "react";
+import { createContext,useContext } from "react";
 
 // 2ND WAY FOR CONTEXT 
 export const themecontext=createContext({
-    thememode:"Light",
+    thememode:"light",
     darktheme:()=>{},
     lighttheme:()=>{}
 })
@@ -10,6 +10,6 @@ export const themecontext=createContext({
 export const ThemecontextProvider=themecontext.Provider
 
 export default function useTheme(){
-    return usecontext(themecontext)
+    return useContext(themecontext)
 // DUE TI THIS WE DOESN'T NEED TWO INPORTS EXPLICITLY
 }
